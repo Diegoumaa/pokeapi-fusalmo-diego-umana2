@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #4fc3f7 0%, #4dd0e1 50%, #4fc3f7 100%);
+}
+
+.pokemon-card {
+    width: 340px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    font-size: 16px;
+    color: #333;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-image {
+    background: #e1f5fe;
+    padding: 20px;
+    position: relative;
+}
+
+.pokemon-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-image:hover img {
+    transform: scale(1.05);
+}
+
+.pokemon-info {
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.pokemon-info::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background: linear-gradient(135deg, #81d4fa 25%, #4fc3f7 50%, #29b6f6 75%);
+    z-index: -1;
+    border-radius: 16px;
+    opacity: 0.7;
+}
+
+.pokemon-info h1 {
+    font-size: 2em;
+    color: #37474f;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pokemon-stats {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-weight: bold;
+    color: #37474f;
+}
+
+.pokemon-abilities h2 {
+    font-size: 1.2em;
+    color: #37474f;
+    margin-bottom: 10px;
+}
+
+.pokemon-abilities ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon-abilities li {
+    background: #e3f2fd;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #37474f;
+    transition: background-color 0.3s ease;
+}
+
+.pokemon-abilities li:hover {
+    background-color: #b3e5fc;
+}
+
+.stat-value {
+    font-size: 1.4em;
+    color: #37474f;
+    font-weight: bold;
+}
+
+#pokemon-hp:before,
+#pokemon-exp:before {
+    font-weight: normal;
+    color: #78909c;
+}
+
+#pokemon-exp {
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #b3e5fc;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#pokemon-exp:hover {
+    background-color: #81d4fa;
+}
